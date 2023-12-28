@@ -1,5 +1,5 @@
 import React from "react";
-import SingleSkill from "./SingleSkill";
+import Image from "next/image";
 
 const images = [
   {
@@ -107,18 +107,42 @@ const images = [
 
 const Skills = () => {
   return (
-    <div className="xl:mx-[200px] mb-10">
-      <h1 className="font-fancy text-4xl text-primary mt-20 mb-5">Skills</h1>
-
-      <div className="flex flex-wrap gap-14 md:mt-5 items-center justify-center">
-        {images.map((image, index) => (
-          <SingleSkill
-            key={index}
-            name={image.name}
-            imgSrc={image.imgName}
-            percentage={image.percentage}
-            negPercentage={image.negPercentage}
+    <div className="mb-10">
+      <h1 className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3">
+        <span className="mx-auto">
+          <Image
+            src="/images/skills.svg"
+            alt="Skills image"
+            height={40}
+            width={40}
           />
+        </span>
+        Skills
+      </h1>
+
+      <div className="flex flex-wrap gap-4 lg:gap-14 md:mt-5 items-center justify-center">
+        {images.map((image, index) => (
+          <div
+            className={`h-fit w-fit border-2 rounded-full p-1 ${
+              index < 8 && "border-primary"
+            } ${
+              index > 7 &&
+              index < 13 &&
+              "border-s-primary border-t-primary border-b-primary border-e-gray-700"
+            } ${
+              index > 12 &&
+              "border-s-primary border-t-gray-700 border-b-primary border-e-gray-700"
+            }`}
+          >
+            <Image
+              key={index}
+              src={image.imgName}
+              alt="Skill image"
+              height={100}
+              width={100}
+              className="object-scale-down my-4 h-[35px] w-[35px] lg:h-[60px] lg:w-[60px]"
+            />
+          </div>
         ))}
       </div>
     </div>

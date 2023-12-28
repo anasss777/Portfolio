@@ -1,9 +1,36 @@
+import Image from "next/image";
 import React from "react";
 
 const WhoAmI = () => {
   return (
     <div>
-      <h1 className="font-fancy text-4xl text-primary mt-20 mb-5">Who Am I?</h1>
+      <Image
+        src="/images/personalPicture.png"
+        alt="Portfolio Picture"
+        className="mx-auto mt-10"
+        height={120}
+        width={120}
+      />
+
+      <h1 className="text-4xl md:text-6xl text-primary font-montserrat mx-auto mt-10 tracking-widest">
+        Anas Chammam
+      </h1>
+
+      <h1 className="text-2xl md:text-4xl text-white font-montserrat mx-auto mt-5 tracking-widest">
+        Software Engineer
+      </h1>
+
+      <h1 className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3">
+        <span className="mx-auto">
+          <Image
+            src="/images/whoAmI.svg"
+            alt="Who am I image"
+            height={45}
+            width={45}
+          />
+        </span>
+        Who Am I?
+      </h1>
 
       <p className="text-white font-montserrat text-center">
         Accomplished{" "}

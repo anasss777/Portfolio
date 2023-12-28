@@ -9,13 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#ae9560"
+        primary: "#ae9560",
+        secondary: "#242d3d"
       },
       fontFamily: {
         'fancy': ['Dancing Script', 'sans-serif'],
         'mcLaren': ['McLaren', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
-      }
+      },
+      boxShadow: {
+        Card: "0px 0px 30px rgba(174, 149, 96, 0.15);",
+      },
     },
   },
   plugins: [],

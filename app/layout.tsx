@@ -20,7 +20,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-gradient-to-t from-[#242d3d]/90 via-[#242d3d] to-[#242d3d]/90">
+      <body className="bg-gradient-to-t from-secondary via-secondary to-secondary w-full">
         {children}
       </body>
     </html>
