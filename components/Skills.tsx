@@ -123,6 +123,7 @@ const Skills = () => {
       <div className="flex flex-wrap gap-4 lg:gap-14 md:mt-5 items-center justify-center">
         {images.map((image, index) => (
           <div
+            key={index}
             className={`h-fit w-fit border-2 rounded-full p-1 ${
               index < 8 && "border-primary"
             } ${
@@ -135,7 +136,6 @@ const Skills = () => {
             }`}
           >
             <Image
-              key={index}
               src={image.imgName}
               alt="Skill image"
               height={100}

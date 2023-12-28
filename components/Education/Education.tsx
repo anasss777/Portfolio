@@ -28,7 +28,7 @@ const Education = () => {
         <p className={`text-xs text-white/50 mb-4`}>Graduated in June 2023</p>
         {/* content */}
         <p>
-          I earned a Bachelor's degree in{" "}
+          I earned a Bachelor&apos;s degree in{" "}
           <span className="font-bold text-primary/70">
             Software Engineering
           </span>{" "}
