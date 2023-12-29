@@ -19,6 +19,7 @@ const config: Config = {
       },
       boxShadow: {
         Card: "0px 0px 30px rgba(174, 149, 96, 0.15);",
+        CardExtra: "0px 0px 30px rgba(174, 149, 96, 0.65);",
       },
     },
   },

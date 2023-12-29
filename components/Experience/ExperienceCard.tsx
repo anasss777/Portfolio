@@ -53,7 +53,7 @@ const ExperienceCard = ({
           <Link
             href={link1}
             target="_blank"
-            className={`ml-4 hover:underline hover:opacity-50`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
           >
             {link1Name}
           </Link>
@@ -62,7 +62,7 @@ const ExperienceCard = ({
           <Link
             href={link2}
             target="_blank"
-            className={`ml-4 hover:underline hover:opacity-50`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
           >
             {link2Name}
           </Link>
@@ -71,7 +71,7 @@ const ExperienceCard = ({
           <Link
             href={link3}
             target="_blank"
-            className={`ml-4 hover:underline hover:opacity-50`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
           >
             {link3Name}
           </Link>

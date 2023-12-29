@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceCard from "../Experience/ExperienceCard";
+import ExperienceCard from "./Experience/ExperienceCard";
 import Image from "next/image";
 
 const Education = () => {
@@ -10,8 +10,8 @@ const Education = () => {
           <Image
             src="/images/education.svg"
             alt="Education image"
-            height={40}
-            width={40}
+            height={45}
+            width={45}
           />
         </span>
         Education
