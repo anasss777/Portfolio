@@ -1,9 +1,31 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import { motion } from "framer-motion";
 
 const WhoAmI = () => {
+  const fedeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: () => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "linear",
+        duration: 0.5,
+      },
+    }),
+  };
+
   return (
-    <div>
+    <motion.div
+      variants={fedeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       <Image
         src="/images/personalPicture.png"
         alt="Portfolio Picture"
@@ -52,7 +74,7 @@ const WhoAmI = () => {
         <strong className="text-primary">&nbsp;Full stack development</strong>.
         Eager to start a fulfilling career.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

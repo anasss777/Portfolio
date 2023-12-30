@@ -1,7 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
-import React from "react";
 
 type Props = {
+  xAxis: string;
   company: string;
   job: string;
   start: string;
@@ -18,6 +21,7 @@ type Props = {
 };
 
 const ExperienceCard = ({
+  xAxis,
   company,
   job,
   start,
@@ -33,7 +37,25 @@ const ExperienceCard = ({
   link3Name,
 }: Props) => {
   return (
-    <div
+    <motion.div
+      variants={{
+        initial: {
+          opacity: 0,
+          x: Number(xAxis),
+        },
+        animate: () => ({
+          opacity: 1,
+          x: 0,
+          transition: {
+            ease: "linear",
+            duration: 0.7,
+            delay: 0.5,
+          },
+        }),
+      }}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       className={`text-white font-montserrat text-left border border-primary md:w-[600px] mx-auto px-5 lg:px-10 py-5 rounded-xl shadow-Card`}
     >
       {/* title */}
@@ -77,7 +99,7 @@ const ExperienceCard = ({
           </Link>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

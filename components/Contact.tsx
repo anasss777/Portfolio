@@ -1,15 +1,40 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Contact = () => {
   function getCurrentYear(): number {
     const currentYear: number = new Date().getFullYear();
     return currentYear;
   }
+
+  const fedeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: () => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "linear",
+        duration: 1,
+        delay: 0.5,
+      },
+    }),
+  };
+
   return (
     <div>
-      <h1 className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-1">
+      <motion.h1
+        variants={fedeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-1"
+      >
         <span className="mx-auto">
           <Image
             src="/images/contact.svg"
@@ -19,11 +44,31 @@ const Contact = () => {
           />
         </span>
         Get in Touch
-      </h1>
+      </motion.h1>
 
       <div className={`flex md:flex-row flex-col`}>
         {/* Phone and whatsapp */}
-        <h1 className="font-montserrat text-xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1">
+        <motion.h1
+          variants={{
+            initial: {
+              opacity: 0,
+              x: "200",
+            },
+            animate: () => ({
+              opacity: 1,
+              x: 0,
+              transition: {
+                ease: "linear",
+                duration: 0.7,
+                delay: 0.5,
+              },
+            }),
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="font-montserrat text-xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1"
+        >
           <span className="mx-auto">
             <Image
               src="/images/phone.png"
@@ -34,9 +79,29 @@ const Contact = () => {
             />
           </span>
           +905343689567
-        </h1>
+        </motion.h1>
         {/* Email */}
-        <h1 className="font-montserrat text-xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1">
+        <motion.h1
+          variants={{
+            initial: {
+              opacity: 0,
+              x: "-200",
+            },
+            animate: () => ({
+              opacity: 1,
+              x: 0,
+              transition: {
+                ease: "linear",
+                duration: 0.7,
+                delay: 0.5,
+              },
+            }),
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="font-montserrat text-xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1"
+        >
           <span className="mx-auto">
             <Image
               src="/images/mail.png"
@@ -47,11 +112,29 @@ const Contact = () => {
             />
           </span>
           anass2000271@gmail.com
-        </h1>
+        </motion.h1>
       </div>
 
       <div className="flex flex-col">
-        <div className="flex flex-row mx-auto gap-4">
+        <motion.div
+          variants={{
+            initial: {
+              scale: 0,
+            },
+            animate: () => ({
+              scale: 1,
+              transition: {
+                ease: "linear",
+                duration: 0.5,
+                delay: 0.5,
+              },
+            }),
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="flex flex-row mx-auto gap-4"
+        >
           <Link
             href="https://www.linkedin.com/in/anas-chammem-977880296/"
             target="_blank"
@@ -75,7 +158,7 @@ const Contact = () => {
               ease-linear"
             />
           </Link>
-        </div>
+        </motion.div>
         <p className="mt-10 text-white/70 font-montserrat">
           © {getCurrentYear()} Anas Chammam
         </p>

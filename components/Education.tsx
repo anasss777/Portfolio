@@ -1,11 +1,34 @@
-import React from "react";
-import ExperienceCard from "./Experience/ExperienceCard";
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Education = () => {
+  const fedeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: () => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "linear",
+        duration: 0.5,
+        delay: 0.5,
+      },
+    }),
+  };
+
   return (
     <div>
-      <h1 className="font-fancy text-5xl text-primary mt-20 mb-10 mx-auto flex flex-col justify-center gap-1">
+      <motion.h1
+        variants={fedeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="font-fancy text-5xl text-primary mt-20 mb-10 mx-auto flex flex-col justify-center gap-1"
+      >
         <span className="mx-auto">
           <Image
             src="/images/education.svg"
@@ -15,8 +38,13 @@ const Education = () => {
           />
         </span>
         Education
-      </h1>
-      <div
+      </motion.h1>
+
+      <motion.div
+        variants={fedeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
         className={`text-white font-montserrat text-left border border-primary md:w-[600px] mx-auto px-5 lg:px-10 py-5 rounded-xl
         shadow-Card`}
       >
@@ -64,7 +92,7 @@ const Education = () => {
           </span>{" "}
           (3.56).
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };

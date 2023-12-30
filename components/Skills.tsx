@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
@@ -106,9 +108,31 @@ const images = [
 ];
 
 const Skills = () => {
+  const fedeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: () => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "linear",
+        duration: 0.5,
+        delay: 1,
+      },
+    }),
+  };
+
   return (
     <div className="mb-10">
-      <h1 className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3">
+      <motion.h1
+        variants={fedeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3"
+      >
         <span className="mx-auto">
           <Image
             src="/images/skills.svg"
@@ -118,11 +142,27 @@ const Skills = () => {
           />
         </span>
         Skills
-      </h1>
+      </motion.h1>
 
       <div className="flex flex-wrap gap-4 lg:gap-14 md:mt-5 items-center justify-center">
         {images.map((image, index) => (
-          <div
+          <motion.div
+            variants={{
+              initial: {
+                scale: 0,
+              },
+              animate: () => ({
+                scale: 1,
+                transition: {
+                  ease: "linear",
+                  duration: 0.5,
+                  delay: Number("0." + index),
+                },
+              }),
+            }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             key={index}
             className={`h-fit w-fit border-2 rounded-full p-1 ${
               index < 8 && "border-primary"
@@ -142,7 +182,7 @@ const Skills = () => {
               width={100}
               className="object-scale-down my-4 h-[35px] w-[35px] lg:h-[60px] lg:w-[60px]"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
