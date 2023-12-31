@@ -52,7 +52,7 @@ const Contact = () => {
           variants={{
             initial: {
               opacity: 0,
-              x: "200",
+              x: "100",
             },
             animate: () => ({
               opacity: 1,
@@ -85,7 +85,7 @@ const Contact = () => {
           variants={{
             initial: {
               opacity: 0,
-              x: "-200",
+              x: "-100",
             },
             animate: () => ({
               opacity: 1,

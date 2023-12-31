@@ -41,10 +41,12 @@ const ExperienceCard = ({
       variants={{
         initial: {
           opacity: 0,
+          scale: 0,
           x: Number(xAxis),
         },
         animate: () => ({
           opacity: 1,
+          scale: 1,
           x: 0,
           transition: {
             ease: "linear",
