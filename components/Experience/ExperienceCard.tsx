@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 type Props = {
+  isArabic: boolean;
   xAxis: string;
   company: string;
   job: string;
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const ExperienceCard = ({
+  isArabic,
   xAxis,
   company,
   job,
@@ -61,23 +63,34 @@ const ExperienceCard = ({
       className={`text-white font-montserrat text-left border border-primary md:w-[600px] mx-auto px-5 lg:px-10 py-5 rounded-xl shadow-Card`}
     >
       {/* title */}
-      <p className={`text-xl font-bold text-primary`}>
+      <p
+        className={`text-xl font-bold text-primary ${
+          isArabic && "rtl text-right"
+        }`}
+      >
         {company} / {job}
       </p>
       {/* time and place */}
-      <p className={`text-xs text-white/50 mb-4`}>
+      <p
+        className={`text-xs text-white/50 mb-4 ${isArabic && "rtl text-right"}`}
+      >
         {start} - {end}, {address}
       </p>
       {/* content */}
-      <p>{content1}</p> {content2 && <br />}
+      <p className={`${isArabic && "rtl text-right"}`}>{content1}</p>{" "}
+      {content2 && <br />}
       {/* links */}
-      <p className={`font-bold text-primary`}>{content2}</p>
+      <p className={`font-bold text-primary ${isArabic && "rtl text-right"}`}>
+        {content2}
+      </p>
       <div className={`flex flex-col`}>
         {link1 && (
           <Link
             href={link1}
             target="_blank"
-            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80 ${
+              isArabic && "rtl text-right"
+            }`}
           >
             {link1Name}
           </Link>
@@ -86,7 +99,9 @@ const ExperienceCard = ({
           <Link
             href={link2}
             target="_blank"
-            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80 ${
+              isArabic && "rtl text-right"
+            }`}
           >
             {link2Name}
           </Link>
@@ -95,7 +110,9 @@ const ExperienceCard = ({
           <Link
             href={link3}
             target="_blank"
-            className={`ml-4 hover:underline text-primary/80 hover:opacity-80`}
+            className={`ml-4 hover:underline text-primary/80 hover:opacity-80 ${
+              isArabic && "rtl text-right"
+            }`}
           >
             {link3Name}
           </Link>

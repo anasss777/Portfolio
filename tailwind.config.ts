@@ -16,6 +16,9 @@ const config: Config = {
         'fancy': ['Dancing Script', 'sans-serif'],
         'mcLaren': ['McLaren', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
+        'tajawal': ['Tajawal', 'sans-serif'],
+        'gulzar': ['Gulzar', 'sans-serif'],
+        'ruqaa': ['Aref Ruqaa', 'sans-serif'],
       },
       boxShadow: {
         Card: "0px 0px 30px rgba(174, 149, 96, 0.15);",

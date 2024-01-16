@@ -1,10 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const Contact = () => {
+  const t = useTranslations("contact");
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   function getCurrentYear(): number {
     const currentYear: number = new Date().getFullYear();
     return currentYear;
@@ -33,7 +38,9 @@ const Contact = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-1"
+        className={`font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-1 ${
+          isArabic && "font-ruqaa"
+        }`}
       >
         <span className="mx-auto">
           <Image
@@ -43,7 +50,7 @@ const Contact = () => {
             width={40}
           />
         </span>
-        Get in Touch
+        {t("contact")}
       </motion.h1>
 
       <div className={`flex md:flex-row flex-col`}>

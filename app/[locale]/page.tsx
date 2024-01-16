@@ -3,7 +3,6 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience/Experience";
 import Skills from "@/components/Skills";
 import WhoAmI from "@/components/WhoAmI";
-import Image from "next/image";
 
 export default function Home() {
   return (

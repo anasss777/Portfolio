@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const images = [
@@ -108,6 +109,10 @@ const images = [
 ];
 
 const Skills = () => {
+  const t = useTranslations("skills");
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   const fedeInAnimationVariants = {
     initial: {
       opacity: 0,
@@ -131,7 +136,9 @@ const Skills = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3"
+        className={`font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3 ${
+          isArabic && "font-ruqaa"
+        }`}
       >
         <span className="mx-auto">
           <Image
@@ -141,7 +148,7 @@ const Skills = () => {
             width={40}
           />
         </span>
-        Skills
+        {t("skills")}
       </motion.h1>
 
       <div className="flex flex-wrap gap-4 lg:gap-14 md:mt-5 items-center justify-center">

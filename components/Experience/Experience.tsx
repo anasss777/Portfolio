@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { experienceContent } from "./ExperienceContent";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
 const Experience = () => {
+  const t = useTranslations("experience");
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
   const fedeInAnimationVariants = {
     initial: {
       opacity: 0,
@@ -29,7 +34,9 @@ const Experience = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="font-fancy text-5xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1"
+        className={`font-fancy text-5xl text-primary mt-10 mb-10 mx-auto flex flex-col justify-center gap-1 ${
+          isArabic && "font-ruqaa"
+        }`}
       >
         <span className="mx-auto">
           <Image
@@ -39,21 +46,22 @@ const Experience = () => {
             width={40}
           />
         </span>
-        Experience
+        {t("experience")}
       </motion.h1>
 
       <div className={`flex flex-col gap-8 justify-center`}>
         {experienceContent.map((exp, index) => (
           <ExperienceCard
-            xAxis={index % 2 === 0 ? "-200" : "200"}
             key={index}
+            isArabic={isArabic}
+            xAxis={index % 2 === 0 ? "-200" : "200"}
             company={exp.company}
-            job={exp.job}
-            start={exp.start}
-            end={exp.end}
-            address={exp.address}
-            content1={exp.content1}
-            content2={exp.content2}
+            job={isArabic ? exp.jobAr : exp.job}
+            start={isArabic ? exp.startAr : exp.start}
+            end={isArabic ? exp.endAr : exp.end}
+            address={isArabic ? exp.addressAr : exp.address}
+            content1={isArabic ? exp.content1Ar : exp.content1}
+            content2={isArabic ? exp.content2Ar : exp.content2}
             link1={exp.link1}
             link2={exp.link2}
             link3={exp.link3}
