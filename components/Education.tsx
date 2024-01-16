@@ -58,7 +58,7 @@ const Education = () => {
         {/* title */}
         <p
           className={`text-xl font-bold text-primary  ${
-            isArabic && "rtl text-right"
+            isArabic && "rtl text-right font-tajawal"
           }`}
         >
           Üsküdar University / {t("degree")}
@@ -66,14 +66,14 @@ const Education = () => {
         {/* time */}
         <p
           className={`text-xs text-white/50 mb-4  ${
-            isArabic && "rtl text-right"
+            isArabic && "rtl text-right font-tajawal"
           }`}
         >
           {t("gDate")}
         </p>
         {/* content */}
         {isArabic ? (
-          <p className="rtl text-right">
+          <p className="rtl text-right font-tajawal">
             حصلت على درجة البكالوريوس في{" "}
             <span className="text-primary">هندسة البرمجيات</span> من{" "}
             <span className="text-primary">جامعة أوسكودار</span>، وحصلت على{" "}

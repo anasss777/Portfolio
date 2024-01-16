@@ -65,19 +65,23 @@ const ExperienceCard = ({
       {/* title */}
       <p
         className={`text-xl font-bold text-primary ${
-          isArabic && "rtl text-right"
+          isArabic && "rtl text-right font-tajawal"
         }`}
       >
         {company} / {job}
       </p>
       {/* time and place */}
       <p
-        className={`text-xs text-white/50 mb-4 ${isArabic && "rtl text-right"}`}
+        className={`text-xs text-white/50 mb-4 ${
+          isArabic && "rtl text-right font-tajawal"
+        }`}
       >
         {start} - {end}, {address}
       </p>
       {/* content */}
-      <p className={`${isArabic && "rtl text-right"}`}>{content1}</p>{" "}
+      <p className={`${isArabic && "rtl text-right font-tajawal"}`}>
+        {content1}
+      </p>{" "}
       {content2 && <br />}
       {/* links */}
       <p className={`font-bold text-primary ${isArabic && "rtl text-right"}`}>
