@@ -4,7 +4,7 @@ import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import Head from "./Head";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 
 interface RootLayoutProps {
   children: ReactNode;
