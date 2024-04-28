@@ -39,7 +39,7 @@ const images = [
   },
   {
     name: "Firebase",
-    imgName: "/images/firebase.svg",
+    imgName: "/images/firebase.png",
   },
   {
     name: "NextAuth.js",
