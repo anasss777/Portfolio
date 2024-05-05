@@ -21,6 +21,7 @@ const config: Config = {
         'ruqaa': ['Aref Ruqaa', 'sans-serif'],
       },
       boxShadow: {
+        CardMin: "0px 0px 15px rgba(174, 149, 96, 0.15);", 
         Card: "0px 0px 30px rgba(174, 149, 96, 0.15);",
         CardExtra: "0px 0px 30px rgba(174, 149, 96, 0.65);",
       },

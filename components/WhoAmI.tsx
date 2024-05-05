@@ -32,11 +32,11 @@ const WhoAmI = () => {
       viewport={{ once: true }}
     >
       <Image
-        src="/images/personalPicture.png"
+        src="/images/me4.png"
         alt="Portfolio Picture"
-        className="mx-auto mt-10"
-        height={120}
-        width={120}
+        className="mx-auto mt-10 object-cover h-52 w-52 rounded-full border border-primary bg-primary/30 shadow-CardMin shadow-primary/50"
+        height={1200}
+        width={1200}
       />
 
       <h1
