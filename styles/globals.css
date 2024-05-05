@@ -9,3 +9,12 @@
 .ltr {
     direction: ltr !important;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: #ae9560 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

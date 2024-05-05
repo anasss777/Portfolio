@@ -68,7 +68,7 @@ const ExperienceCard = ({
           isArabic && "rtl text-right font-tajawal"
         }`}
       >
-        {company} / {job}
+        {company} <span className="font-normal">|</span> {job}
       </p>
       {/* time and place */}
       <p
