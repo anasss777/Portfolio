@@ -138,16 +138,7 @@ const Skills = () => {
             whileInView="animate"
             viewport={{ once: true }}
             key={index}
-            className={`h-fit w-fit border-2 rounded-full p-1 ${
-              index < 8 && "border-primary"
-            } ${
-              index > 7 &&
-              index < 13 &&
-              "border-s-primary border-t-primary border-b-primary border-e-gray-700"
-            } ${
-              index > 12 &&
-              "border-s-primary border-t-gray-700 border-b-primary border-e-gray-700"
-            }`}
+            className={`h-fit w-fit`}
           >
             <Image
               src={image.imgName}
