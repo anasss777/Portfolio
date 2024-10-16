@@ -1,30 +1,62 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import Image from "next/image";
-import React from "react";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import { svgKsa, svgLocale, svgUk } from "./svgPaths";
+
 export const locales = ["ar", "en"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 
-const Header = () => {
+function LocaleSwitcher() {
   const pathname = usePathname();
   const locale = useLocale();
   const isArabic = locale === "ar";
 
   return (
-    <div className={`flex flex-row justify-center py-3`}>
-      <Link href={pathname} locale={isArabic ? "en" : "ar"}>
-        <Image
-          src={isArabic ? "/images/UKflag.png" : "/images/KSAflag.png"}
-          alt="Change language icon"
-          height={600}
-          width={600}
-          className={`h-auto w-10 object-scale-down cursor-pointer`}
-        />
-      </Link>
+    <div
+      className={`relative flex flex-col justify-center items-center pt-4 hover:contrast-[110%] contrast-[95%] py-1 ${
+        locale === "ar" && "rtl"
+      }`}
+    >
+      <div
+        className={`group flex flex-col justify-center items-center gap-1 text-primary`}
+      >
+        <p>{isArabic ? "Language" : "اللغة"}</p>
+        <span>{svgLocale}</span>
+
+        <div
+          className={`border border-primary w-[125px] rounded-md bg-[#242c39] py-2 duration-300 group-hover:opacity-100 text-white
+          invisible absolute top-20 opacity-0 shadow-lg group-hover:visible`}
+        >
+          {/* Arabic Option */}
+          <Link
+            href={pathname}
+            locale="ar"
+            className={`contrast-[95%] hover:contrast-125 rounded text-sm hover:opacity-50 w-full flex flex-row justify-center
+            items-center gap-2 ${isArabic ? "text-right" : "text-left"} ${
+              locale === "ar" && "hidden"
+            }`}
+          >
+            <span>{svgKsa}</span>
+            <p>العربية</p>
+          </Link>
+
+          {/* English Option */}
+          <Link
+            href={pathname}
+            locale="en"
+            className={`contrast-[95%] hover:contrast-125 rounded text-sm hover:opacity-50 w-full flex flex-row justify-center
+            items-center gap-2 ${isArabic ? "text-right" : "text-left"} ${
+              locale === "en" && "hidden"
+            }`}
+          >
+            <span>{svgUk}</span>
+            <p>English</p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
-export default Header;
+export default LocaleSwitcher;
