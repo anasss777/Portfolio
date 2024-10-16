@@ -43,36 +43,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      imageSrc: "/images/matloop.png",
-      imageSrcAr: "/images/matloopAr.png",
-      link: "https://matloop-demo.vercel.app/en",
-      linkAr: "https://matloop-demo.vercel.app/ar",
-    },
-    {
-      id: 2,
-      imageSrc: "/images/almutahde.png",
-      imageSrcAr: "/images/almutahdeAr.png",
-      link: "https://almutahde.com/en",
-      linkAr: "https://www.almutahde.com/ar",
+      link: "https://dentist-sable-ten.vercel.app/en",
+      linkAr: "https://dentist-sable-ten.vercel.app/ar",
     },
     {
       id: 3,
-      imageSrc: "/images/e-shop.png",
-      imageSrcAr: "/images/e-shop.png",
-      link: "https://eshop-responsive-website.vercel.app/",
-      linkAr: "https://eshop-responsive-website.vercel.app/",
+      link: "https://dr-basheer-chammam.vercel.app/en",
+      linkAr: "https://dr-basheer-chammam.vercel.app/ar",
     },
     {
-      id: 4,
-      imageSrc: "/images/mazzadak.png",
-      imageSrcAr: "/images/mazzadakAr.png",
-      link: "https://mazzadak-demo.vercel.app/en",
-      linkAr: "https://mazzadak-demo.vercel.app/ar",
+      id: 2,
+      link: "https://matloop-demo.vercel.app/en",
+      linkAr: "https://matloop-demo.vercel.app/ar",
     },
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center py-10 lg:py-20">
+    <div className="flex flex-col justify-center items-center py-10 lg:py-20 sm:px-7 md:px-32">
       <motion.h1
         variants={fedeInAnimationVariants}
         initial="initial"
@@ -97,7 +84,7 @@ const Projects = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="w-full max-w-4xl"
+        className="w-full"
       >
         <Slider {...settings}>
           {projects
@@ -107,18 +94,22 @@ const Projects = () => {
                 key={project.id}
                 className={`bg-third p-3 w-full ${isArabic && "rtl"}`}
               >
-                <Link
-                  href={isArabic ? project.linkAr : project.link}
-                  target="_blank"
-                >
-                  <Image
-                    src={isArabic ? project.imageSrcAr : project.imageSrc}
-                    alt={`Project ${project.id}`}
-                    height={497}
-                    width={1400}
-                    className={`object-cover h-[497px] w-full rounded-xl border border-primary shadow-CardSmall shadow-primary`}
-                  />
-                </Link>
+                <div className={`text-white mb-5`}>
+                  {t("visitWebsite")}:{" "}
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    className={`underline text-primary hover:text-primary/70`}
+                  >
+                    {project.link}
+                  </Link>{" "}
+                </div>
+                <iframe
+                  width="100%"
+                  height="300"
+                  src={isArabic ? project.linkAr : project.link}
+                  className={`h-[80vh] w-full rounded-xl border border-primary shadow-CardSmall shadow-primary`}
+                />
               </div>
             ))}
         </Slider>

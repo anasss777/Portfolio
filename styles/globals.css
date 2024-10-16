@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .rtl {
-    direction: rtl !important;
-  }
-  
+  direction: rtl !important;
+}
+
 .ltr {
-    direction: ltr !important;
+  direction: ltr !important;
 }
 
 .slick-prev:before,

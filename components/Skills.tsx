@@ -97,7 +97,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="mb-10">
+    <div className={`mb-10 md:px-20 xl:px-60`}>
       <motion.h1
         variants={fedeInAnimationVariants}
         initial="initial"

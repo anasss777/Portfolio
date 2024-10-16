@@ -54,7 +54,7 @@ const Experience = () => {
           <ExperienceCard
             key={index}
             isArabic={isArabic}
-            xAxis={index % 2 === 0 ? "-200" : "200"}
+            xAxis={index % 2 === 0 ? "-100" : "100"}
             company={exp.company}
             job={isArabic ? exp.jobAr : exp.job}
             start={isArabic ? exp.startAr : exp.start}
@@ -64,10 +64,10 @@ const Experience = () => {
             content2={isArabic ? exp.content2Ar : exp.content2}
             link1={exp.link1}
             link2={exp.link2}
-            link3={exp.link3}
+            // link3={exp.link3}
             link1Name={exp.link1Name}
             link2Name={exp.link2Name}
-            link3Name={exp.link3Name}
+            // link3Name={exp.link3Name}
           />
         ))}
       </div>

@@ -30,6 +30,7 @@ const WhoAmI = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
+      className={`md:px-20 xl:px-60`}
     >
       <Image
         src="/images/me4.png"

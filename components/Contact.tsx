@@ -85,7 +85,7 @@ const Contact = () => {
               className="invert h-8 w-auto"
             />
           </span>
-          +905343689567
+          +96594942517
         </motion.h1>
         {/* Email */}
         <motion.h1
