@@ -33,7 +33,7 @@ const WhoAmI = () => {
       className={`md:px-20 xl:px-60`}
     >
       <Image
-        src="/images/me4.png"
+        src="/images/me6.png"
         alt="Portfolio Picture"
         className="mx-auto mt-10 object-cover h-52 w-52 rounded-full border border-primary bg-primary/30 shadow-CardMin shadow-primary/50"
         height={1200}
