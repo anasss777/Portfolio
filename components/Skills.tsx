@@ -46,16 +46,20 @@ const images = [
     imgName: "/images/nextauth.png",
   },
   {
-    name: "Sanity (CMS)",
-    imgName: "/images/sanity.png",
-  },
-  {
     name: "Node.js",
     imgName: "/images/nodejs.png",
   },
   {
+    name: "MySQL",
+    imgName: "/images/mysql.png",
+  },
+  {
     name: "Next-intl",
     imgName: "/images/next-intl.png",
+  },
+  {
+    name: "Sanity (CMS)",
+    imgName: "/images/sanity.png",
   },
   {
     name: "Java",
@@ -140,13 +144,17 @@ const Skills = () => {
             key={index}
             className={`h-fit w-fit`}
           >
-            <Image
-              src={image.imgName}
-              alt="Skill image"
-              height={100}
-              width={100}
-              className="object-scale-down my-4 h-[35px] w-[35px] lg:h-[60px] lg:w-[60px]"
-            />
+            <div
+              className={`p-1 bg-gray-500/20 border border-gray-500/50 rounded-full shadow-lg`}
+            >
+              <Image
+                src={image.imgName}
+                alt="Skill image"
+                height={100}
+                width={100}
+                className="object-scale-down my-4 h-[35px] w-[35px] lg:h-[60px] lg:w-[60px]"
+              />
+            </div>
           </motion.div>
         ))}
       </div>
