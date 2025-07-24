@@ -16,7 +16,7 @@
   },
   "education": {
     "education": "Education",
-    "degree": "Bachelor",
+    "degree": "Bachelor’s Degree in Software Engineering",
     "gDate": "Graduated in June 2023"
   },
   "contact": {
@@ -25,5 +25,16 @@
   "projects": {
     "title": "Projects",
     "visitWebsite": "Visit Website"
+  },
+  "print": {
+    "name": "Anas Chammam",
+    "title": "Software Engineer",
+    "address": "Tunisia/Kuwait",
+    "phone": "+96594942517",
+    "email": "anass2000271@gmail.com",
+    "personalWebsite": "Personal Website",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "education": "Education"
   }
 }

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { parseHTML } from "./Common";
 
 const Education = () => {
   const t = useTranslations("education");
@@ -73,59 +74,17 @@ const Education = () => {
         </p>
         {/* content */}
         {isArabic ? (
-          <p className="rtl text-right font-tajawal">
-            حصلت على درجة البكالوريوس في{" "}
-            <span className="text-primary">هندسة البرمجيات</span> من{" "}
-            <span className="text-primary">جامعة أوسكودار</span>، وحصلت على{" "}
-            <span className="text-primary">معدل تراكمي ممتاز قدره 3.53</span>.
-            من المواضيع الجديرة بالذكر والمعدل التراكمي المقابل لها ما يلي:{" "}
-            <br /> البرمجة كائنية التوجه (4)، هندسة الكمبيوتر (4)، إنشاء
-            البرمجيات (3)، تصميم البرمجيات وهندستها (3.6)، أنظمة إدارة قواعد
-            البيانات (4)، التحقق من صحة البرامج واختبارها (4). والشبكات العصبية
-            الاصطناعية (3.56).
-          </p>
+          <div className={`custom-quill-style w-full`}>
+            {parseHTML(
+              `<p class="ql-align-right">التخرج مع مرتبة الشرف، مع أداء أكاديمي متميّز طوال فترة الدراسة. من أبرز المواد التي تم التفوق فيها:</p><ol><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>البرمجة كائنية التوجه (OOP)</strong> – 4.00</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>معمارية الحاسوب</strong> – 4.00</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>أنظمة إدارة قواعد البيانات</strong> – 4.00</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>التحقق والاختبار البرمجي</strong> – 4.00</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>تصميم وهندسة البرمجيات</strong> – 3.60</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>الشبكات العصبية الاصطناعية</strong> – 3.56</li><li data-list="bullet" class="ql-align-right"><span class="ql-ui" contenteditable="false"></span><strong>بناء البرمجيات</strong> – 3.00</li></ol><p class="ql-align-right"><br></p>`
+            )}
+          </div>
         ) : (
-          <p>
-            I earned a Bachelor&apos;s degree in{" "}
-            <span className="font-bold text-primary/70">
-              Software Engineering
-            </span>{" "}
-            from{" "}
-            <span className="font-bold text-primary/70">
-              Üsküdar University
-            </span>
-            , achieving a notable{" "}
-            <span className="font-bold text-primary/70">CGPA of 3.53</span>.
-            Noteworthy subjects and their corresponding GPAs include{" "}
-            <span className="italic text-primary/80">
-              Object-Oriented Programming
-            </span>{" "}
-            (4),
-            <span className="italic text-primary/80">
-              Computer Architecture
-            </span>{" "}
-            (4),{" "}
-            <span className="italic text-primary/80">
-              Software Construction
-            </span>{" "}
-            (3),{" "}
-            <span className="italic text-primary/80">
-              Software Design and Architecture
-            </span>{" "}
-            (3.6),{" "}
-            <span className="italic text-primary/80">
-              Database Management Systems
-            </span>{" "}
-            (4),{" "}
-            <span className="italic text-primary/80">
-              Software Validation and Testing
-            </span>{" "}
-            (4), and{" "}
-            <span className="italic text-primary/80">
-              Artificial Neural Networks
-            </span>{" "}
-            (3.56).
-          </p>
+          <div className={`custom-quill-style w-full`}>
+            {parseHTML(
+              `<p>Graduated with honors, demonstrating consistent academic excellence. Notable coursework with top performance:</p><ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Object-Oriented Programming</strong> – 4.00</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Computer Architecture</strong> – 4.00</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Database Management Systems</strong> – 4.00</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Software Validation and Testing</strong> – 4.00</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Software Design and Architecture</strong> – 3.60</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Artificial Neural Networks</strong> – 3.56</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span><strong>Software Construction</strong> – 3.00</li></ol>`
+            )}
+          </div>
         )}
       </motion.div>
     </div>

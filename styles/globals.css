@@ -18,3 +18,145 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/****** Rich Text Decoration Scoped ******/
+.custom-quill-style h1 {
+  font-size: 16px;
+}
+
+.custom-quill-style h2 {
+  font-size: 14px;
+}
+
+.custom-quill-style p {
+  font-size: 13px;
+}
+
+.custom-quill-style li {
+  font-size: 13px;
+  margin: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .custom-quill-style h1 {
+    font-size: 24px;
+  }
+
+  .custom-quill-style h2 {
+    font-size: 16px;
+  }
+
+  .custom-quill-style li {
+    margin: 0 50px;
+  }
+
+  .custom-quill-style .bg-custom-postion {
+    background-position: 35% 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-quill-style h1 {
+    font-size: 30px;
+  }
+
+  .custom-quill-style h2 {
+    font-size: 18px;
+  }
+
+  .custom-quill-style p {
+    font-size: 14px;
+  }
+
+  .custom-quill-style li {
+    font-size: 14px;
+    margin: 0 20px;
+  }
+}
+
+.custom-quill-style ul li {
+  list-style-type: disc;
+}
+
+.custom-quill-style ol li {
+  list-style-type: decimal;
+}
+
+.custom-quill-style .ql-align-center {
+  text-align: center;
+}
+
+.ql-align-right {
+  text-align: right;
+  direction: rtl;
+}
+/****** Rich Text Decoration Scoped ******/
+
+/****** Rich Text Decoration Scoped 2 ******/
+.custom-quill-style2 h1 {
+  font-size: 20px;
+}
+
+.custom-quill-style2 h2 {
+  font-size: 18px;
+}
+
+.custom-quill-style2 p {
+  font-size: 17px;
+}
+
+.custom-quill-style2 li {
+  font-size: 17px;
+  margin: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .custom-quill-style2 h1 {
+    font-size: 28px;
+  }
+
+  .custom-quill-style2 h2 {
+    font-size: 20px;
+  }
+
+  .custom-quill-style2 li {
+    margin: 0 50px;
+  }
+
+  .custom-quill-style2 .bg-custom-postion {
+    background-position: 35% 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-quill-style2 h1 {
+    font-size: 34px;
+  }
+
+  .custom-quill-style2 h2 {
+    font-size: 22px;
+  }
+
+  .custom-quill-style2 p {
+    font-size: 18px;
+  }
+
+  .custom-quill-style2 li {
+    font-size: 18px;
+    margin: 0 20px;
+  }
+}
+
+.custom-quill-style2 ul li {
+  list-style-type: disc;
+}
+
+.custom-quill-style2 ol li {
+  list-style-type: decimal;
+}
+
+.custom-quill-style2 .ql-align-center {
+  text-align: center;
+}
+
+/****** Rich Text Decoration Scoped 2 ******/

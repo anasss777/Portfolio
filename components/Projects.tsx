@@ -42,19 +42,24 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
+      id: 0,
       link: "https://dentist-sable-ten.vercel.app/en",
       linkAr: "https://dentist-sable-ten.vercel.app/ar",
     },
     {
-      id: 3,
-      link: "https://dr-basheer-chammam.vercel.app/en",
-      linkAr: "https://dr-basheer-chammam.vercel.app/ar",
+      id: 1,
+      link: "https://haladd.com/en",
+      linkAr: "https://haladd.com/ar",
     },
     {
       id: 2,
       link: "https://matloop-demo.vercel.app/en",
       linkAr: "https://matloop-demo.vercel.app/ar",
+    },
+    {
+      id: 3,
+      link: "https://dr-basheer-chammam.vercel.app/en",
+      linkAr: "https://dr-basheer-chammam.vercel.app/ar",
     },
   ];
 
@@ -97,11 +102,11 @@ const Projects = () => {
                 <div className={`text-white mb-5`}>
                   {t("visitWebsite")}:{" "}
                   <Link
-                    href={project.link}
+                    href={isArabic ? project.linkAr : project.link}
                     target="_blank"
                     className={`underline text-primary hover:text-primary/70`}
                   >
-                    {project.link}
+                    {isArabic ? project.linkAr : project.link}
                   </Link>{" "}
                 </div>
                 <iframe

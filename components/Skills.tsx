@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { skillsArray } from "./SkillsArray";
 
 const images = [
   {
@@ -101,13 +102,13 @@ const Skills = () => {
   };
 
   return (
-    <div className={`mb-10 md:px-20 xl:px-60`}>
+    <div className={`mt-10 pt-20 md:px-20 xl:px-60`}>
       <motion.h1
         variants={fedeInAnimationVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className={`font-fancy text-5xl text-primary mt-20 mb-5 mx-auto flex flex-col justify-center gap-3 ${
+        className={`font-fancy text-5xl text-primary mb-20 mx-auto flex flex-col justify-center gap-3 ${
           isArabic && "font-ruqaa"
         }`}
       >
@@ -122,8 +123,8 @@ const Skills = () => {
         {t("skills")}
       </motion.h1>
 
-      <div className="flex flex-wrap gap-4 lg:gap-14 md:mt-5 items-center justify-center">
-        {images.map((image, index) => (
+      <div className="flex flex-wrap gap-6 md:gap-10 md:mt-5 items-center justify-center">
+        {skillsArray.map((skill, index) => (
           <motion.div
             variants={{
               initial: {
@@ -145,15 +146,12 @@ const Skills = () => {
             className={`h-fit w-fit`}
           >
             <div
-              className={`p-1 bg-gray-500/20 border border-gray-500/50 rounded-full shadow-lg`}
+              className={`p-2 md:p-4 bg-white/20 border border-gray-500/50 rounded-full shadow-Card md:shadow-CardExtra
+              shadow-white/20 md:shadow-white/20`}
             >
-              <Image
-                src={image.imgName}
-                alt="Skill image"
-                height={100}
-                width={100}
-                className="object-scale-down my-4 h-[35px] w-[35px] lg:h-[60px] lg:w-[60px]"
-              />
+              <span>
+                {window.innerWidth > 768 ? skill.bigSvg : skill.theSvg}
+              </span>
             </div>
           </motion.div>
         ))}

@@ -16,7 +16,7 @@
   },
   "education": {
     "education": "التعليم",
-    "degree": "بكالوريوس",
+    "degree": "بكالوريوس هندسة البرمجيات",
     "gDate": "تخرجت في يونيو 2023"
   },
   "contact": {
@@ -25,5 +25,16 @@
   "projects": {
     "title": "مشاريعي",
     "visitWebsite": "زيارة الموقع"
+  },
+  "print": {
+    "name": "أنس شمام",
+    "title": "مهندس برمجيات",
+    "address": "تونس/الكويت",
+    "phone": "+96594942517",
+    "email": "anass2000271@gmail.com",
+    "personalWebsite": "الموقع الشخصي",
+    "skills": "المهارات",
+    "experiences": "الخبرات",
+    "education": "التعليم"
   }
 }

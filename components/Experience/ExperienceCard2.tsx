@@ -6,7 +6,6 @@ import { parseHTML } from "../Common";
 
 type Props = {
   isArabic: boolean;
-  xAxis: string;
   company: string;
   job: string;
   start: string;
@@ -22,9 +21,8 @@ type Props = {
   link3Name?: string;
 };
 
-const ExperienceCard = ({
+const ExperienceCard2 = ({
   isArabic,
-  xAxis,
   company,
   job,
   start,
@@ -40,29 +38,11 @@ const ExperienceCard = ({
   link3Name,
 }: Props) => {
   return (
-    <motion.div
-      variants={{
-        initial: {
-          opacity: 0,
-          scale: 0,
-          x: Number(xAxis),
-        },
-        animate: () => ({
-          opacity: 1,
-          scale: 1,
-          x: 0,
-          transition: {
-            ease: "linear",
-            duration: 0.7,
-            delay: 0.5,
-          },
-        }),
-      }}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-      className={`text-white font-tajawal text-left border border-primary md:w-[600px] mx-auto px-5 lg:px-10 py-5 rounded-xl shadow-Card`}
+    <div
+      className={`text-white font-tajawal text-left w-4/5 mx-auto px-5 lg:px-10 py-5`}
     >
+      <div className={`w-4/5 h-0.5 bg-black mb-10`}></div>
+
       {/* title */}
       <p
         className={`text-xl font-bold text-primary ${
@@ -73,14 +53,16 @@ const ExperienceCard = ({
       </p>
       {/* time and place */}
       <p
-        className={`text-xs text-white/50 mb-4 ${
+        className={`text-xs text-gray-400 mb-4 ${
           isArabic && "rtl text-right font-tajawal"
         }`}
       >
         {start} - {end}, {address}
       </p>
       {/* content */}
-      <div className={`custom-quill-style w-full`}>{parseHTML(content1)}</div>
+      <div className={`custom-quill-style w-full !text-black`}>
+        {parseHTML(content1)}
+      </div>
       {content2 && <br />}
       {/* links */}
       <p className={`font-bold text-primary ${isArabic && "rtl text-right"}`}>
@@ -121,8 +103,8 @@ const ExperienceCard = ({
           </Link>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-export default ExperienceCard;
+export default ExperienceCard2;

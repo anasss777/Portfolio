@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
+import { parseHTML } from "./Common";
+import { bioAr, bioEn } from "./Print/BioContent";
 
 const WhoAmI = () => {
   const t = useTranslations("WhoAmI");
@@ -74,46 +76,13 @@ const WhoAmI = () => {
       </h1>
 
       {isArabic ? (
-        <p
-          className={`text-white text-center font-tajawal text-base md:text-xl font-light rtl`}
-        >
-          <span className={`text-primary`}>خريج جامعة أوسكودار</span> بتركيا قسم
-          الهندسة تخصص{" "}
-          <span className={`text-primary`}>
-            هندسة البرمجيات بتقدير ممتاز بدرجة 3.53 من 4
-          </span>
-          . حاليًا أبحث عن فرصة عمل تمكّنني من تنمية مهاراتي البرمجية والمساهمة
-          في مشاريع ذات تأثير. بفضل{" "}
-          <span className={`text-primary`}>مهارات التواصل</span> الاستثنائية و
-          <span className={`text-primary`}> الدافع الشخصي</span>، وسجل حافل{" "}
-          <span className={`text-primary`}>كعضو قيم في الفريق</span>، أجد نفسي
-          مستعدًا للتفوق في أي بيئة تعاونية. شغفي يكمن في{" "}
-          <span className={`text-primary`}>تطوير مواقع الويب </span>
-          وأتطلع بحماس إلى بداية حياة مهنية مليئة بالإنجازات في هذا الميدان.
-        </p>
+        <div className={`custom-quill-style2 w-full font-tajawal !text-xl`}>
+          {parseHTML(bioAr)}
+        </div>
       ) : (
-        <p className="text-white font-montserrat text-center">
-          Accomplished{" "}
-          <strong className="text-primary">&nbsp;Software Engineering</strong>{" "}
-          graduate from
-          <strong className="text-primary">
-            &nbsp;Uskudar University
-          </strong>{" "}
-          <strong className="text-primary">&nbsp;(CGPA: 3.53)</strong>. Seeking
-          a job to refine <br /> my programming skills and contribute to
-          impactful projects.{" "}
-          <strong className="text-primary">
-            &nbsp;Strong communication skills
-          </strong>
-          ,<strong className="text-primary">&nbsp;self-motivated</strong>,
-          <strong className="text-primary">
-            <br />
-            team player
-          </strong>
-          . Passionate about{" "}
-          <strong className="text-primary">&nbsp;Full stack development</strong>
-          . Eager to start a fulfilling career.
-        </p>
+        <div className={`custom-quill-style2 w-full font-tajawal !text-xl`}>
+          {parseHTML(bioEn)}
+        </div>
       )}
     </motion.div>
   );
