@@ -10,8 +10,8 @@ const PrintExperiences = () => {
   const isArabic = locale === "ar";
 
   return (
-    <div className={`flex flex-row justify-center items-start mt-60`}>
-      <div className={`flex flex-col justify-center items-center gap-1 w-1/3`}>
+    <div className={`flex flex-row justify-center items-start mt-40`}>
+      <div className={`flex flex-col justify-center items-center gap-1 w-1/4`}>
         <div className={`flex flex-col justify-center items-start gap-4 w-60`}>
           <div className={`w-14 h-[1.5px] bg-black`}></div>
           <div className={`flex flex-row justify-center items-center gap-1`}>
@@ -23,8 +23,8 @@ const PrintExperiences = () => {
         </div>
       </div>
 
-      <div className={`flex flex-col justify-center items-center gap-4 w-2/3`}>
-        <div className={`flex flex-col gap-8 justify-center`}>
+      <div className={`flex flex-col justify-center items-center gap-4 w-4/5`}>
+        <div className={`flex flex-col gap-2 justify-center`}>
           {experienceContent.map((exp, index) => (
             <ExperienceCard2
               key={index}

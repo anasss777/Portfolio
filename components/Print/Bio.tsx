@@ -13,7 +13,7 @@ const Bio = () => {
 
   return (
     <div className={`flex flex-row justify-center items-center`}>
-      <div className={`flex flex-col justify-center items-center gap-4 w-1/3`}>
+      <div className={`flex flex-col justify-center items-center gap-4 w-1/4`}>
         <Image
           src={"/images/me6.png"}
           alt={`Anas Chammam image`}
@@ -63,7 +63,7 @@ const Bio = () => {
         </div>
       ) : (
         <div
-          className={`custom-quill-style2 font-tajawal !text-3xl w-2/3 px-20`}
+          className={`custom-quill-style2 font-tajawal !text-3xl w-3/4 px-20`}
         >
           {parseHTML(bioEn2)}
         </div>

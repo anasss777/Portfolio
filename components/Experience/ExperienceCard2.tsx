@@ -39,9 +39,9 @@ const ExperienceCard2 = ({
 }: Props) => {
   return (
     <div
-      className={`text-white font-tajawal text-left w-4/5 mx-auto px-5 lg:px-10 py-5`}
+      className={`text-white font-tajawal text-left w-[90%] mx-auto px-5 lg:px-10 pt-5`}
     >
-      <div className={`w-4/5 h-0.5 bg-black mb-10`}></div>
+      <div className={`w-[90%] h-0.5 bg-black mb-5`}></div>
 
       {/* title */}
       <p
@@ -63,7 +63,6 @@ const ExperienceCard2 = ({
       <div className={`custom-quill-style w-full !text-black`}>
         {parseHTML(content1)}
       </div>
-      {content2 && <br />}
       {/* links */}
       <p className={`font-bold text-primary ${isArabic && "rtl text-right"}`}>
         {content2}

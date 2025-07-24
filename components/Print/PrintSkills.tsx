@@ -9,7 +9,7 @@ const PrintSkills = () => {
 
   return (
     <div className={`flex flex-row justify-center items-start`}>
-      <div className={`flex flex-col justify-center items-center gap-1 w-1/3`}>
+      <div className={`flex flex-col justify-center items-center gap-1 w-1/4`}>
         <div className={`flex flex-col justify-center items-start gap-4 w-60`}>
           <div className={`w-14 h-[1.5px] bg-black`}></div>
           <div className={`flex flex-row justify-center items-center gap-1`}>
@@ -19,7 +19,7 @@ const PrintSkills = () => {
         </div>
       </div>
 
-      <div className={`flex flex-col justify-center items-center gap-4 w-2/3`}>
+      <div className={`flex flex-col justify-center items-center gap-4 w-3/4`}>
         <div className={`w-4/5 h-0.5 bg-black`}></div>
 
         <div className={`grid grid-cols-2 w-[550px] gap-4 ltr`}>

@@ -12,7 +12,7 @@ const PrintResume = () => {
 
   return (
     <div
-      className={`flex flex-col gap-10 pb-10 text-center mx-auto bg-white h-full min-h-screen ${
+      className={`flex flex-col gap-10 text-center mx-auto bg-white h-full min-h-screen ${
         isArabic && "rtl"
       }`}
     >
